@@ -11,116 +11,183 @@
   <meta property="og:image" content="https://i.ibb.co/d0GWDs92/logo.png" />
   <meta property="og:url" content="https://mylecommunity.in" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Myle Community",
-    "url": "https://mylecommunity.in",
-    "logo": "https://i.ibb.co/d0GWDs92/logo.png",
-    "sameAs": [
-      "https://www.instagram.com/myle_community/",
-      "https://www.instagram.com/karanveersingh_24/"
-    ],
-    "description": "Join India's Fastest-Growing Student Community for Online Work. Learn, work, and grow with mentorship and digital skills.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "support@mylecommunity.in",
-      "contactType": "customer support",
-      "areaServed": "IN",
-      "availableLanguage": "English"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Myle Community?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Myle Community is where students discover how digital platforms can help them grow, learn, and explore new-age online opportunities — in a way that truly makes sense for them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who can be part of Myle Community?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Anyone curious about how online work actually happens, and wants to explore genuine digital opportunities designed for students and beginners."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What will I discover after filling the form?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After you submit your details, we will contact you and share all information step by step."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need any experience to start?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not at all. Everything begins from the basics — you’ll be guided step by step once you explore more through the form."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why should I fill out the form now?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Because the sooner you explore it, the clearer things become. Every day you wait, someone else learns how this works — so why not you?"
-        }
-      }
-    ]
-  }
-  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: #fafafa; color: #1e1e1e; scroll-behavior: smooth; }
-
-    header { background: linear-gradient(135deg, #56CCF2, #FF9A8B); color: #fff; padding: 6rem 2rem 4rem; text-align: center; position: relative; overflow: hidden; }
-    header::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.svgrepo.com/show/530448/abstract-shapes.svg') no-repeat center; background-size: cover; opacity: 0.08; z-index: 0; }
-    header h1 { font-size: 2.5rem; font-weight: 700; margin: 0; position: relative; z-index: 1; }
-    header p { margin-top: 1rem; font-size: 1.1rem; opacity: 0.9; position: relative; z-index: 1; }
-    .cta-btn { background: #fff; color: #FF6F61; font-weight: 600; border: none; padding: 0.9rem 2rem; border-radius: 30px; font-size: 1rem; cursor: pointer; margin-top: 2rem; position: relative; z-index: 1; transition: all 0.3s ease; }
-    .cta-btn:hover { background: #FF6F61; color: #fff; transform: scale(1.03); }
-
-    section.benefits { max-width: 1100px; margin: 4rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .benefit { background: #fff; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease; }
-    .benefit:hover { transform: translateY(-5px); }
-    .benefit img { width: 60px; height: 60px; margin-bottom: 1rem; }
-
-    section.trust { text-align: center; padding: 4rem 2rem; background: linear-gradient(180deg, #f6edff, #fafafa); }
-    .trust h2 { font-size: 2rem; color: #333; margin-bottom: 2rem; }
-    .trust-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
-    .stat { background: #fff; border-radius: 16px; padding: 2rem; width: 260px; box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
-    .stat h3 { font-size: 1.5rem; color: #FF6F61; margin: 0 0 0.5rem; }
-    .stat p { color: #555; font-size: 0.95rem; margin: 0; }
-
-    .form-popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); align-items: center; justify-content: center; z-index: 1000; }
-    .form-popup.active { display: flex; animation: fadeIn 0.5s ease; }
-    .form-container { background: #fff; border-radius: 20px; width: 90%; max-width: 500px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 3px solid; border-image: linear-gradient(135deg, #56CCF2, #FF6F61) 1; }
-    .form-header { background: linear-gradient(135deg, #56CCF2, #FF6F61); color: #fff; padding: 1.2rem; text-align: center; font-size: 1.3rem; font-weight: 600; }
-    .form-body iframe { width: 100%; height: 500px; border: none; }
-    .close-btn { position: absolute; top: 20px; right: 30px; font-size: 1.8rem; color: #fff; cursor: pointer; transition: 0.3s; }
-    .close-btn:hover { color: #FF9A8B; }
-
-    footer { text-align: center; background: #111; color: #ccc; padding: 2rem 1rem; font-size: 0.9rem; }
-    footer a { color: #8ea8ff; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @media (max-width: 768px) {
-      header h1 { font-size: 2rem; }
-      .cta-btn { width: 80%; }
-      .stat { width: 80%; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#F4F8FC;
+      color:#1B2735;
+      overflow-x:hidden;
+    }
+    header{
+      position:relative;
+      text-align:center;
+      padding:7rem 2rem;
+      background:linear-gradient(135deg,#DCECFB,#A7C7E7,#6A93CB);
+      background-size:400% 400%;
+      animation:gradientMove 10s ease infinite;
+      color:#fff;
+    }
+    @keyframes gradientMove{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    header::before{
+      content:'';
+      background:url('https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg') center/cover no-repeat;
+      position:absolute;top:0;left:0;width:100%;height:100%;
+      opacity:0.25;z-index:0;
+    }
+    header h1{
+      position:relative;z-index:1;
+      font-size:2.4rem;font-weight:700;
+      text-shadow:0 2px 4px rgba(0,0,0,0.2);
+    }
+    header p{
+      margin-top:1rem;font-size:1.1rem;
+      opacity:.95;z-index:1;position:relative;
+    }
+    .cta-btn{
+      margin-top:2rem;
+      background:#FF6F61;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      padding:0.9rem 2.2rem;
+      border-radius:40px;
+      cursor:pointer;
+      font-size:1rem;
+      transition:.3s;
+    }
+    .cta-btn:hover{
+      background:#FF897E;
+      transform:scale(1.05);
+    }
+    .carousel{
+      position:relative;
+      max-width:100%;
+      overflow:hidden;
+      margin:4rem auto;
+      width:90%;
+      border-radius:16px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    }
+    .slides{
+      display:flex;
+      width:400%;
+      animation:slide 16s infinite;
+    }
+    .slides img{
+      width:100%;
+      flex-shrink:0;
+      height:400px;
+      object-fit:cover;
+    }
+    @keyframes slide{
+      0%{transform:translateX(0)}
+      25%{transform:translateX(-100%)}
+      50%{transform:translateX(-200%)}
+      75%{transform:translateX(-300%)}
+      100%{transform:translateX(0)}
+    }
+    .caption{
+      position:absolute;
+      bottom:20px;
+      left:0;
+      width:100%;
+      text-align:center;
+      color:#fff;
+      text-shadow:0 2px 8px rgba(0,0,0,0.4);
+      font-weight:600;
+      background:rgba(0,0,0,0.25);
+      padding:0.6rem 0;
+    }
+    section.trust{
+      padding:3rem 1.5rem;
+      text-align:center;
+      background:#FFFFFF;
+    }
+    .trust h2{
+      font-size:1.9rem;
+      margin-bottom:1.5rem;
+      color:#1B2735;
+    }
+    .stat-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1.5rem;
+    }
+    .stat{
+      background:#fff;
+      border-radius:14px;
+      padding:1.7rem;
+      width:260px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+    .stat h3{
+      color:#2C5282;
+      font-size:1.6rem;
+      margin-bottom:.5rem;
+    }
+    .popup{
+      display:none;
+      position:fixed;
+      top:0;left:0;
+      width:100%;height:100%;
+      background:rgba(0,0,0,0.5);
+      backdrop-filter:blur(5px);
+      align-items:center;
+      justify-content:center;
+      z-index:10;
+    }
+    .popup.active{display:flex}
+    .popup-box{
+      background:#fff;
+      border:3px solid transparent;
+      border-image:linear-gradient(135deg,#A7C7E7,#FF6F61)1;
+      border-radius:20px;
+      max-width:500px;
+      width:90%;
+      overflow:hidden;
+      box-shadow:0 0 20px rgba(0,0,0,0.1);
+    }
+    .popup-header{
+      background:linear-gradient(135deg,#A7C7E7,#6A93CB);
+      color:#fff;
+      text-align:center;
+      padding:1rem;
+      font-weight:600;
+    }
+    .popup iframe{width:100%;height:500px;border:none}
+    .close-btn{
+      position:absolute;
+      top:20px;
+      right:30px;
+      font-size:2rem;
+      color:#fff;
+      cursor:pointer;
+    }
+    footer{
+      text-align:center;
+      background:linear-gradient(135deg,#2C5364,#203A43,#0F2027);
+      color:#eee;
+      padding:2.5rem 1rem;
+      font-size:.9rem;
+      margin-top:3rem;
+    }
+    footer a{
+      color:#A7C7E7;
+      text-decoration:none;
+      margin:0 .3rem;
+    }
+    footer a:hover{text-decoration:underline}
+    @media(max-width:768px){
+      header h1{font-size:1.8rem}
+      .slides img{height:280px}
+      .stat{width:80%}
     }
   </style>
 </head>
@@ -128,55 +195,33 @@
   <header>
     <h1>Know How Students Are Building Their First Online Income with Myle Community 💡</h1>
     <p>Learn, grow and explore genuine online opportunities trusted by students nationwide.</p>
-    <button class="cta-btn" onclick="togglePopup()">Get All Details</button>
+    <button class="cta-btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
   </header>
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg" alt="Founder with Thar">
+      <img src="https://i.ibb.co/DDmBJn5m/Community-Meeting.jpg" alt="Community Meeting">
+      <img src="https://i.ibb.co/Zp6j2sMv/Award.jpg" alt="Award">
+      <img src="https://i.ibb.co/vxkRCVx2/Phuket.jpg" alt="Lifestyle">
+    </div>
+    <div class="caption" id="caption">Led by vision. Built with belief. Empowering thousands.</div>
+  </div>
 
   <section class="trust">
     <h2>Built by Students. Trusted Across India.</h2>
-    <div class="trust-stats">
-      <div class="stat">
-        <h3>10k+</h3>
-        <p>Students have achieved their first online income milestone with Myle.</p>
-      </div>
-      <div class="stat">
-        <h3>19+</h3>
-        <p>States across India with active learners and growing communities.</p>
-      </div>
-      <div class="stat">
-        <h3>Thousands</h3>
-        <p>Join every day to explore new ways of digital growth and success.</p>
-      </div>
+    <div class="stat-container">
+      <div class="stat"><h3>10k+</h3><p>Students have achieved their first online income milestone with Myle.</p></div>
+      <div class="stat"><h3>19+</h3><p>States across India with active learners and growing communities.</p></div>
+      <div class="stat"><h3>Thousands</h3><p>Join every day to explore new ways of digital growth and success.</p></div>
     </div>
-    <button class="cta-btn" style="margin-top: 2.5rem;" onclick="togglePopup()">Get All Details</button>
+    <button class="cta-btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
   </section>
 
-  <section class="benefits">
-    <div class="benefit">
-      <img src="https://www.svgrepo.com/show/530484/laptop.svg" alt="Work Anywhere" />
-      <h3>Work Anywhere</h3>
-      <p>Flexible opportunities to work from laptop or phone, wherever you are.</p>
-      <button class="cta-btn" style="margin-top: 1.2rem;" onclick="togglePopup()">Get All Details</button>
-    </div>
-    <div class="benefit">
-      <img src="https://www.svgrepo.com/show/532141/learning.svg" alt="Learn Skills" />
-      <h3>Learn & Grow</h3>
-      <p>Develop real-world digital skills and start your journey toward online income.</p>
-      <button class="cta-btn" style="margin-top: 1.2rem;" onclick="togglePopup()">Get All Details</button>
-    </div>
-    <div class="benefit">
-      <img src="https://www.svgrepo.com/show/530456/community.svg" alt="Community" />
-      <h3>Guidance & Support</h3>
-      <p>Learn from a supportive network of peers and mentors who help you start right.</p>
-      <button class="cta-btn" style="margin-top: 1.2rem;" onclick="togglePopup()">Get All Details</button>
-    </div>
-  </section>
-
-  <div class="form-popup" id="formPopup">
-    <div class="form-container">
-      <div class="form-header">Get All Details 💡</div>
-      <div class="form-body">
-        <iframe src="https://forms.mylecommunity.in/myle/form/CopyLetsWorkwithMYLECommunity/formperma/ZlYN-IAQH0qp87lh1672fU_wKykKqtkWMJsEupWEWJQ" loading="lazy"></iframe>
-      </div>
+  <div class="popup" id="formPopup">
+    <div class="popup-box">
+      <div class="popup-header">Fill this form and we’ll contact you to explain everything step by step 💡</div>
+      <iframe src="https://forms.mylecommunity.in/myle/form/CopyLetsWorkwithMYLECommunity/formperma/ZlYN-IAQH0qp87lh1672fU_wKykKqtkWMJsEupWEWJQ" loading="lazy"></iframe>
     </div>
     <div class="close-btn" onclick="togglePopup()">×</div>
   </div>
@@ -188,13 +233,23 @@
       <a href="https://www.instagram.com/myle_community/" target="_blank">@myle_community</a> |
       <a href="https://www.instagram.com/karanveersingh_24/" target="_blank">@karanveersingh_24</a>
     </p>
-    <p><a href="https://mylecommunity.in/privacy">Privacy Policy</a></p>
+    <p><a href="https://mylecommunity.in/privacy" target="_blank">Privacy Policy</a></p>
   </footer>
 
   <script>
-    function togglePopup() {
-      const popup = document.getElementById('formPopup');
-      popup.classList.toggle('active');
+    const captions=[
+      "Led by vision. Built with belief. Empowering thousands.",
+      "Students across India connecting and learning together.",
+      "Recognized for leadership and community excellence.",
+      "Exploring growth, mentorship, and rewards through teamwork."
+    ];
+    let idx=0;
+    setInterval(()=>{
+      idx=(idx+1)%captions.length;
+      document.getElementById('caption').textContent=captions[idx];
+    },4000);
+    function togglePopup(){
+      document.getElementById('formPopup').classList.toggle('active');
     }
   </script>
 </body>
