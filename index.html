@@ -3,118 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Myle Community | Online Work from Home for Students</title>
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fafafa;
-      margin: 0;
-      color: #1f1f1f;
+  <title>Myle Community | Work From Home for Students</title>
+  <meta name="description" content="Learn. Work. Grow. Join India’s Fastest-Growing Student Community for Online Work — powered by Myle Community." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://i.ibb.co/27S5hrzd/favicon.png" type="image/png" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Myle Community | Learn. Work. Grow." />
+  <meta property="og:description" content="Join India’s Fastest-Growing Student Community for Online Work — Learn. Work. Grow. with Myle Community." />
+  <meta property="og:image" content="https://i.ibb.co/d0GWDs92/logo.png" />
+  <meta property="og:url" content="https://mylecommunity.in" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Myle Community",
+    "url": "https://mylecommunity.in",
+    "logo": "https://i.ibb.co/d0GWDs92/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/myle_community/",
+      "https://www.instagram.com/karanveersingh_24/"
+    ],
+    "description": "Join India's Fastest-Growing Student Community for Online Work. Learn, work, and grow with mentorship and digital skills.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@mylecommunity.in",
+      "contactType": "customer support",
+      "areaServed": "IN",
+      "availableLanguage": "English"
     }
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-    }
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    }
-    h2 {
-      text-align: center;
-      color: #333;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      background: #f2f2ff;
-      padding: 0.8rem 1rem;
-      margin: 0.5rem 0;
-      border-radius: 8px;
-    }
-    .form-container {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      min-height: 500px;
-      border-radius: 8px;
-    }
-    @media (max-width: 768px) {
-      iframe {
-        min-height: 600px;
-        width: 100%;
+  }
+  </script>
+
+  <!-- FAQ Schema (conversion-focused) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Myle Community?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Myle Community is where students discover how digital platforms can help them grow, learn, and explore new‑age online opportunities — in a way that truly makes sense for them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who can be part of Myle Community?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Anyone curious about how online work actually happens, and wants to explore genuine digital opportunities designed for students and beginners."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What will I discover after filling the form?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After you submit your details, we will contact you and share all information step by step."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need any experience to start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at all. Everything begins from the basics — you’ll be guided step by step once you explore more through the form."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I fill out the form now?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because the sooner you explore it, the clearer things become. Every day you wait, someone else learns how this works — so why not you?"
+        }
       }
+    ]
+  }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+      color: #1e1e1e;
+      scroll-behavior: smooth;
     }
-    footer {
-      background: #111;
-      color: #ccc;
+
+    /* ===== HERO SECTION ===== */
+    header {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+      padding: 6rem 2rem 4rem;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
+      position: relative;
+      overflow: hidden;
     }
-    footer a {
-      color: #a3a3ff;
-      text-decoration: none;
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://www.svgrepo.com/show/533587/abstract-waves.svg') no-repeat center;
+      background-size: cover;
+      opacity: 0.08;
+      z-index: 0;
+    }
+    header h1 { font-size: 2.5rem; font-weight: 700; margin: 0; position: relative; z-index: 1; }
+    header p { margin-top: 1rem; font-size: 1.1rem; opacity: 0.9; position: relative; z-index: 1; }
+    .cta-btn {
+      background: #fff; color: #2575fc; font-weight: 600; border: none;
+      padding: 0.9rem 2rem; border-radius: 30px; font-size: 1rem; cursor: pointer;
+      margin-top: 2rem; position: relative; z-index: 1; transition: all 0.3s ease;
+    }
+    .cta-btn:hover { background: #2575fc; color: #fff; transform: translateY(-3px); }
+
+    /* ===== BENEFITS ===== */
+    section.benefits {
+      max-width: 1100px; margin: 4rem auto; padding: 0 1.5rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;
+    }
+    .benefit {
+      background: #fff; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      text-align: center; transition: transform 0.3s ease;
+    }
+    .benefit:hover { transform: translateY(-5px); }
+    .benefit img { width: 60px; height: 60px; margin-bottom: 1rem; loading: lazy; }
+
+    /* ===== FORM SECTION ===== */
+    section.form-section { text-align: center; padding: 4rem 1rem; background: linear-gradient(180deg, #eef2ff 0%, #f9f9ff 100%); }
+    section.form-section h2 { font-size: 1.8rem; color: #333; margin-bottom: 1rem; }
+    section.form-section p { color: #555; max-width: 600px; margin: 0 auto 2rem; font-size: 1rem; }
+    iframe { width: 100%; min-height: 600px; border: none; border-radius: 12px; }
+
+    /* ===== FOOTER ===== */
+    footer { text-align: center; background: #111; color: #ccc; padding: 2rem 1rem; font-size: 0.9rem; }
+    footer a { color: #8ea8ff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .social-links { margin-top: 1rem; }
+    .social-links a { margin: 0 10px; color: #8ea8ff; font-weight: 600; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .cta-btn { width: 80%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Work from Home with Myle Community</h1>
-    <p>Helping students and beginners learn skills, work online, and build sustainable income systems.</p>
+    <h1>Start Working Online with Myle Community 🚀</h1>
+    <p>Learn. Work. Grow. Join India’s Fastest-Growing Student Community for Online Work.</p>
+    <button class="cta-btn" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'});">Get Details</button>
   </header>
 
-  <section>
-    <h2>Start Your Journey Towards Digital Independence</h2>
-    <p>
-      Myle Community empowers young individuals to explore online work opportunities through a structured skill-learning system. No false promises, no shortcuts — just real growth through consistency, mentorship, and community support.
-    </p>
+  <section class="benefits">
+    <div class="benefit">
+      <img src="https://www.svgrepo.com/show/530484/laptop.svg" alt="Work Anywhere" loading="lazy" />
+      <h3>Work Anywhere</h3>
+      <p>Flexible opportunities you can manage from your laptop or phone, at your own time and pace.</p>
+    </div>
+    <div class="benefit">
+      <img src="https://www.svgrepo.com/show/532141/learning.svg" alt="Learn Skills" loading="lazy" />
+      <h3>Learn & Grow</h3>
+      <p>Develop practical digital skills that help you earn and build your online presence for the future.</p>
+    </div>
+    <div class="benefit">
+      <img src="https://www.svgrepo.com/show/530456/community.svg" alt="Mentorship" loading="lazy" />
+      <h3>Mentorship & Support</h3>
+      <p>Join a community that guides you through every step of your online career journey.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Why Join Myle Community?</h2>
-    <ul>
-      <li>🌐 100% Online – Work from your phone or laptop from anywhere</li>
-      <li>📘 Learn practical digital skills while you earn</li>
-      <li>🕒 Flexible hours that fit around your college or studies</li>
-    </ul>
-  </section>
-
-  <section class="form-container">
-    <h2>Get More Details</h2>
-    <p>Fill in your details below to receive complete information and personal guidance.</p>
-    <iframe aria-label="Let's Work with MYLE Community 🚀" frameborder="0" style="width:100%;border:none;" src="https://forms.mylecommunity.in/myle/form/CopyLetsWorkwithMYLECommunity/formperma/ZlYN-IAQH0qp87lh1672fU_wKykKqtkWMJsEupWEWJQ"></iframe>
-  </section>
-
-  <section>
-    <h2>Transparency & Privacy</h2>
-    <p>
-      We respect your privacy. Your details are used only to provide information about this work opportunity.
-      You may opt out anytime.
-    </p>
+  <section id="form" class="form-section">
+    <h2>Get Complete Details</h2>
+    <p>Fill out the form below and our team will reach out with personalized guidance on how to start your online journey with Myle Community.</p>
+    <iframe aria-label="Let's Work with MYLE Community 🚀" src="https://forms.mylecommunity.in/myle/form/CopyLetsWorkwithMYLECommunity/formperma/ZlYN-IAQH0qp87lh1672fU_wKykKqtkWMJsEupWEWJQ" loading="lazy"></iframe>
   </section>
 
   <footer>
     <p>© 2025 Myle Community | All Rights Reserved</p>
-    <p>Contact us: <a href="mailto:support@mylecommunity.in">support@mylecommunity.in</a></p>
+    <p>Contact: <a href="mailto:support@mylecommunity.in">support@mylecommunity.in</a></p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/myle_community/" target="_blank">@myle_community</a> |
+      <a href="https://www.instagram.com/karanveersingh_24/" target="_blank">@karanveersingh_24</a>
+    </div>
     <p><a href="https://mylecommunity.in/privacy">Privacy Policy</a></p>
   </footer>
 </body>
