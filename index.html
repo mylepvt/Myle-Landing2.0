@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Myle Community | Know How Students Are Building Their First Online Income 💡</title>
-  <meta name="description" content="Know How Students Are Building Their First Online Income with Myle Community. Learn, grow and explore genuine online opportunities with guidance and trust." />
+  <title>Myle Community | Start Your Online Work From Home Journey 💡</title>
+  <meta name="description" content="Myle Community helps students start their online work from home journey. Learn, grow and build income opportunities with real guidance and community support." />
   <link rel="icon" href="https://i.ibb.co/27S5hrzd/favicon.png" type="image/png" />
-  <meta property="og:title" content="Myle Community | Know How Students Are Building Their First Online Income 💡" />
-  <meta property="og:description" content="Join India's Fastest-Growing Student Community for Online Income Opportunities. Learn, grow and explore genuine digital earning paths." />
+  <meta property="og:title" content="Myle Community | Start Your Online Work From Home Journey 💡" />
+  <meta property="og:description" content="Know how thousands of students are building their first online income from home with Myle Community." />
   <meta property="og:image" content="https://i.ibb.co/d0GWDs92/logo.png" />
   <meta property="og:url" content="https://mylecommunity.in" />
   <meta name="twitter:card" content="summary_large_image" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Poppins',sans-serif;background:#F4F8FC;color:#1B2735;overflow-x:hidden}
+    body{font-family:'Poppins',sans-serif;background:#F4F8FC;color:#1B2735;overflow-x:hidden;line-height:1.6;}
 
+    /* HERO */
     header{
       position:relative;text-align:center;padding:7rem 1.5rem;
       background:linear-gradient(135deg,#DCECFB,#A7C7E7,#6A93CB);
@@ -24,14 +25,23 @@
     @keyframes heroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
     header::before{
       content:"";position:absolute;inset:0;z-index:0;
-      background:url('https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg') center/cover no-repeat;opacity:.25
+      background:url('https://i.ibb.co/6cCZwqQ/Thar-Founder.jpg') center/cover no-repeat;opacity:.28
     }
-    header h1{position:relative;z-index:1;font-size:2.4rem;font-weight:700;text-shadow:0 2px 4px rgba(0,0,0,.18)}
-    header p{position:relative;z-index:1;margin-top:1rem;font-size:1.08rem;opacity:.98}
-    .btn{display:inline-block;margin-top:1.4rem;background:#FF6F61;color:#fff;font-weight:600;border:none;
-      padding:.95rem 2.1rem;border-radius:40px;cursor:pointer;font-size:1rem;transition:.25s}
+    header h1{position:relative;z-index:1;font-size:2.3rem;font-weight:700;text-shadow:0 2px 4px rgba(0,0,0,.18)}
+    header p{position:relative;z-index:1;margin-top:1rem;font-size:1.1rem;opacity:.98}
+    .btn{display:inline-block;margin-top:1.5rem;background:#FF6F61;color:#fff;font-weight:600;border:none;
+      padding:.9rem 2rem;border-radius:40px;cursor:pointer;font-size:1rem;transition:.25s;z-index:2;position:relative;}
     .btn:hover{background:#FF897E;transform:translateY(-2px)}
 
+    /* ABOUT SECTION */
+    section.about{
+      background:#fff;padding:4rem 1.5rem;text-align:center;
+    }
+    .about h2{font-size:2rem;margin-bottom:1.2rem;color:#1B2735;}
+    .about p{max-width:850px;margin:0 auto 1.2rem;font-size:1.05rem;color:#333;}
+    .about strong{color:#2C5282;}
+
+    /* CAROUSEL */
     .carousel{position:relative;margin:3rem auto;width:min(1100px,92%);border-radius:16px;overflow:hidden;background:#fff;
       box-shadow:0 8px 24px rgba(0,0,0,.08)}
     .track{display:flex;transition:transform .7s ease-in-out}
@@ -43,24 +53,24 @@
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
     .dot.active{background:#FF6F61;transform:scale(1.2)}
 
+    /* TRUST */
     section.trust{padding:3rem 1.5rem;text-align:center;background:#fff}
     .trust h2{font-size:1.9rem;margin-bottom:1.4rem}
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1100px;margin:0 auto}
     .stat{background:#fff;border-radius:14px;padding:1.6rem;border:1px solid #eef3f8;box-shadow:0 6px 18px rgba(0,0,0,.06)}
     .stat h3{color:#2C5282;font-size:1.55rem;margin-bottom:.45rem}
 
-    .benefits{background:#F4F8FC;padding:3rem 1.5rem}
-    .benefit-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1100px;margin:0 auto}
-    .card{background:#fff;border-radius:16px;padding:1.6rem;border:1px solid #eef3f8;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:center}
-    .icon{width:56px;height:56px;margin:0 auto .9rem;display:block}
-    .card h4{margin:.4rem 0 .5rem}
+    /* FAQ */
+    .faq{padding:3rem 1.5rem;background:#F9FBFD;text-align:center;}
+    .faq h2{font-size:1.9rem;margin-bottom:1.5rem;}
+    .accordion{max-width:800px;margin:0 auto;text-align:left;}
+    details{background:#fff;margin-bottom:1rem;border-radius:10px;padding:1rem 1.2rem;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);cursor:pointer;}
+    summary{font-weight:600;color:#2C5282;outline:none;}
+    details[open]{background:#f1f6fb;}
+    details p{margin-top:.6rem;font-size:.96rem;color:#333;line-height:1.55;}
 
-    .faq{padding:3rem 1.5rem;background:#fff;text-align:center}
-    .faq h2{font-size:1.8rem;margin-bottom:1.5rem}
-    .faq-item{max-width:800px;margin:0.9rem auto;text-align:left;background:#F8FBFF;padding:1rem 1.5rem;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-    .faq-item h3{font-size:1.1rem;margin-bottom:0.5rem;color:#2C5282}
-    .faq-item p{color:#333;font-size:0.95rem;line-height:1.5}
-
+    /* POPUP */
     .popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);
       align-items:center;justify-content:center;z-index:20}
     .popup.active{display:flex}
@@ -76,18 +86,27 @@
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Know How Students Are Building Their First Online Income with Myle Community 💡</h1>
-    <p>Learn, grow and explore genuine online opportunities trusted by students nationwide.</p>
-    <button class="btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
+    <h1>Start Your Online Work From Home Journey with Myle Community 💡</h1>
+    <p>India’s fastest-growing student community helping young people earn and grow online.</p>
+    <button class="btn" onclick="togglePopup()">Fill the form and we’ll contact you personally 💡</button>
   </header>
+
+  <section class="about">
+    <h2>What This Page Is All About</h2>
+    <p><strong>Myle Community</strong> is a trusted student-based initiative where young people are learning how to start their <strong>online work-from-home journey</strong> — without needing any prior experience or big setup.</p>
+    <p>We guide you on how students like you are building genuine income streams through digital systems, mentorship, and teamwork — all while studying or managing their daily life.</p>
+    <p>It’s not just about earning — it’s about growing skills, confidence, and independence in today’s digital era. Whether you’re in college or just exploring opportunities, this could be your first real step into online income.</p>
+    <button class="btn" onclick="togglePopup()">Get Full Details 💡</button>
+  </section>
 
   <section class="carousel">
     <div class="track" id="track">
-      <div class="slide"><img src="https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg" alt="Founder with Thar"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/DDmBJn5m/Community-Meeting.jpg" alt="Community Meeting"><div class="cap">Students across India connecting and learning together.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/Zp6j2sMv/Award.jpg" alt="Award"><div class="cap">Recognized for leadership and community excellence.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/vxkRCVx2/Phuket.jpg" alt="Lifestyle"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/DDmBJn5m/Community-Meeting.jpg"><div class="cap">Students across India connecting and learning together.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/Zp6j2sMv/Award.jpg"><div class="cap">Recognized for leadership and community excellence.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/vxkRCVx2/Phuket.jpg"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
     </div>
     <div class="dots" id="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
   </section>
@@ -99,26 +118,28 @@
       <div class="stat"><h3>19+</h3><p>States across India with active learners and growing communities.</p></div>
       <div class="stat"><h3>Thousands</h3><p>Join every day to explore new ways of digital growth and success.</p></div>
     </div>
-    <button class="btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
+    <button class="btn" onclick="togglePopup()">Fill this form & get details 💡</button>
   </section>
 
   <section class="faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>What is Myle Community?</h3>
-      <p>Myle is a student-driven community helping young people explore online work opportunities using simple digital tools — guided by mentors who have walked the same path.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Do I need prior experience?</h3>
-      <p>No! Most students who start with Myle are complete beginners. You’ll learn step-by-step how things work and get personal guidance throughout your journey.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How will I know if this is right for me?</h3>
-      <p>After you fill the form, our team will connect with you personally and explain everything in detail. You can then decide if you want to move forward — there’s no pressure.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What will happen after I fill the form?</h3>
-      <p>We’ll reach out to you via call or WhatsApp to share step-by-step details about how the process works and how you can get started from your phone or laptop.</p>
+    <div class="accordion">
+      <details>
+        <summary>What is Myle Community?</summary>
+        <p>Myle is a digital community built for students who want to start online work-from-home projects and create income using social media, communication, and marketing systems — all with real guidance.</p>
+      </details>
+      <details>
+        <summary>Do I need any special skills or background?</summary>
+        <p>No. Most of our students start as complete beginners. We guide you step by step so you can learn and earn at your own pace.</p>
+      </details>
+      <details>
+        <summary>Is this safe and genuine?</summary>
+        <p>Yes. Myle Community is built around mentorship, verified systems, and transparency. You’ll understand everything clearly before starting — we believe in clarity and trust first.</p>
+      </details>
+      <details>
+        <summary>What happens after I fill the form?</summary>
+        <p>Once you submit the form, our team personally contacts you via call or WhatsApp to explain how everything works and what opportunities fit your schedule best.</p>
+      </details>
     </div>
   </section>
 
@@ -137,52 +158,11 @@
     <p><a href="https://mylecommunity.in/privacy" target="_blank">Privacy Policy</a></p>
   </footer>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Myle Community?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Myle is a student-driven community helping young people explore online work opportunities using simple digital tools — guided by mentors who have walked the same path."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need prior experience?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Most students who start with Myle are complete beginners and learn step-by-step with support and guidance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How will I know if this is right for me?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "After filling the form, the team connects personally to explain details. You can decide freely if it fits your goals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What will happen after I fill the form?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The team contacts you via call or WhatsApp to share all steps and help you start easily from your phone or laptop."
-        }
-      }
-    ]
-  }
-  </script>
-
   <script>
-    const track = document.getElementById('track');
-    const dots = Array.from(document.getElementById('dots').children);
-    const slides = document.querySelectorAll('.slide');
-    let i = 0, N = slides.length;
+    const track=document.getElementById('track');
+    const dots=Array.from(document.getElementById('dots').children);
+    const slides=document.querySelectorAll('.slide');
+    let i=0,N=slides.length;
     function go(n){i=(n+N)%N;track.style.transform=`translateX(-${i*100}%)`;dots.forEach((d,idx)=>d.classList.toggle('active',idx===i));}
     dots.forEach((d,idx)=>d.addEventListener('click',()=>{go(idx);reset();}));
     let t=setInterval(()=>go(i+1),4000);
