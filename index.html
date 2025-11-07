@@ -16,7 +16,6 @@
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Poppins',sans-serif;background:#F4F8FC;color:#1B2735;overflow-x:hidden}
 
-    /* ===== HERO ===== */
     header{
       position:relative;text-align:center;padding:7rem 1.5rem;
       background:linear-gradient(135deg,#DCECFB,#A7C7E7,#6A93CB);
@@ -25,7 +24,7 @@
     @keyframes heroGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
     header::before{
       content:"";position:absolute;inset:0;z-index:0;
-      background:url('./assets/thar.jpg') center/cover no-repeat;opacity:.22
+      background:url('https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg') center/cover no-repeat;opacity:.25
     }
     header h1{position:relative;z-index:1;font-size:2.4rem;font-weight:700;text-shadow:0 2px 4px rgba(0,0,0,.18)}
     header p{position:relative;z-index:1;margin-top:1rem;font-size:1.08rem;opacity:.98}
@@ -33,7 +32,6 @@
       padding:.95rem 2.1rem;border-radius:40px;cursor:pointer;font-size:1rem;transition:.25s}
     .btn:hover{background:#FF897E;transform:translateY(-2px)}
 
-    /* ===== CAROUSEL (JS controlled) ===== */
     .carousel{position:relative;margin:3rem auto;width:min(1100px,92%);border-radius:16px;overflow:hidden;background:#fff;
       box-shadow:0 8px 24px rgba(0,0,0,.08)}
     .track{display:flex;transition:transform .7s ease-in-out}
@@ -45,21 +43,24 @@
     .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
     .dot.active{background:#FF6F61;transform:scale(1.2)}
 
-    /* ===== STATS ===== */
     section.trust{padding:3rem 1.5rem;text-align:center;background:#fff}
     .trust h2{font-size:1.9rem;margin-bottom:1.4rem}
     .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;max-width:1100px;margin:0 auto}
     .stat{background:#fff;border-radius:14px;padding:1.6rem;border:1px solid #eef3f8;box-shadow:0 6px 18px rgba(0,0,0,.06)}
     .stat h3{color:#2C5282;font-size:1.55rem;margin-bottom:.45rem}
 
-    /* ===== BENEFITS (with inline SVG, no broken icons) ===== */
     .benefits{background:#F4F8FC;padding:3rem 1.5rem}
     .benefit-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1100px;margin:0 auto}
     .card{background:#fff;border-radius:16px;padding:1.6rem;border:1px solid #eef3f8;box-shadow:0 6px 18px rgba(0,0,0,.06);text-align:center}
     .icon{width:56px;height:56px;margin:0 auto .9rem;display:block}
     .card h4{margin:.4rem 0 .5rem}
 
-    /* ===== POPUP ===== */
+    .faq{padding:3rem 1.5rem;background:#fff;text-align:center}
+    .faq h2{font-size:1.8rem;margin-bottom:1.5rem}
+    .faq-item{max-width:800px;margin:0.9rem auto;text-align:left;background:#F8FBFF;padding:1rem 1.5rem;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    .faq-item h3{font-size:1.1rem;margin-bottom:0.5rem;color:#2C5282}
+    .faq-item p{color:#333;font-size:0.95rem;line-height:1.5}
+
     .popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);
       align-items:center;justify-content:center;z-index:20}
     .popup.active{display:flex}
@@ -69,38 +70,28 @@
     .box iframe{width:100%;height:520px;border:0}
     .close{position:absolute;top:18px;right:26px;color:#fff;font-size:2rem;cursor:pointer}
 
-    /* ===== FOOTER ===== */
     footer{margin-top:3rem;text-align:center;background:linear-gradient(135deg,#2C5364,#203A43,#0F2027);color:#eaeef2;padding:2.3rem 1rem}
     footer a{color:#A7C7E7;text-decoration:none}
     footer a:hover{text-decoration:underline}
-
-    @media (max-width:768px){
-      header{padding:5.5rem 1rem}
-      header h1{font-size:1.8rem}
-      .slide{height:300px}
-    }
   </style>
 </head>
 <body>
-  <!-- HERO -->
   <header>
     <h1>Know How Students Are Building Their First Online Income with Myle Community 💡</h1>
     <p>Learn, grow and explore genuine online opportunities trusted by students nationwide.</p>
     <button class="btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
   </header>
 
-  <!-- CAROUSEL -->
-  <section class="carousel" aria-label="Inside Myle Community">
+  <section class="carousel">
     <div class="track" id="track">
-      <div class="slide"><img src="./assets/thar.jpg" alt="Founder with Thar"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
-      <div class="slide"><img src="./assets/meeting.jpg" alt="Community meeting online"><div class="cap">Students across India connecting and learning together.</div></div>
-      <div class="slide"><img src="./assets/award.jpg" alt="Recognition award"><div class="cap">Recognized for leadership and community excellence.</div></div>
-      <div class="slide"><img src="./assets/phuket.jpg" alt="Lifestyle and growth"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg" alt="Founder with Thar"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/DDmBJn5m/Community-Meeting.jpg" alt="Community Meeting"><div class="cap">Students across India connecting and learning together.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/Zp6j2sMv/Award.jpg" alt="Award"><div class="cap">Recognized for leadership and community excellence.</div></div>
+      <div class="slide"><img src="https://i.ibb.co/vxkRCVx2/Phuket.jpg" alt="Lifestyle"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
     </div>
     <div class="dots" id="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
   </section>
 
-  <!-- TRUST -->
   <section class="trust">
     <h2>Built by Students. Trusted Across India.</h2>
     <div class="stats">
@@ -111,31 +102,26 @@
     <button class="btn" onclick="togglePopup()">Fill this form and we’ll contact you to explain everything step by step 💡</button>
   </section>
 
-  <!-- BENEFITS -->
-  <section class="benefits">
-    <div class="benefit-wrap">
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 7h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" stroke="#2C5282" stroke-width="1.5"/><path d="M3 7l6.5 4a4 4 0 0 0 4 0L20.5 7" stroke="#2C5282" stroke-width="1.5"/></svg>
-        <h4>Work Anywhere</h4>
-        <p>Flexible opportunities you can manage from your phone or laptop.</p>
-        <button class="btn" onclick="togglePopup()">Fill this form & get details</button>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="#2C5282" stroke-width="1.6" stroke-linecap="round"/></svg>
-        <h4>Learn & Grow</h4>
-        <p>Simple guidance that helps beginners start their first online income path.</p>
-        <button class="btn" onclick="togglePopup()">Fill this form & get details</button>
-      </div>
-      <div class="card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M7 8a5 5 0 1 0 10 0 5 5 0 0 0-10 0z" stroke="#2C5282" stroke-width="1.5"/><path d="M2 21a9 9 0 0 1 20 0" stroke="#2C5282" stroke-width="1.5"/></svg>
-        <h4>Guidance & Support</h4>
-        <p>Community + mentors to help you take the right steps, one by one.</p>
-        <button class="btn" onclick="togglePopup()">Fill this form & get details</button>
-      </div>
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>What is Myle Community?</h3>
+      <p>Myle is a student-driven community helping young people explore online work opportunities using simple digital tools — guided by mentors who have walked the same path.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do I need prior experience?</h3>
+      <p>No! Most students who start with Myle are complete beginners. You’ll learn step-by-step how things work and get personal guidance throughout your journey.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How will I know if this is right for me?</h3>
+      <p>After you fill the form, our team will connect with you personally and explain everything in detail. You can then decide if you want to move forward — there’s no pressure.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What will happen after I fill the form?</h3>
+      <p>We’ll reach out to you via call or WhatsApp to share step-by-step details about how the process works and how you can get started from your phone or laptop.</p>
     </div>
   </section>
 
-  <!-- POPUP -->
   <div class="popup" id="popup">
     <div class="box">
       <div class="box-head">Fill this form and we’ll contact you to explain everything step by step 💡</div>
@@ -144,7 +130,6 @@
     <div class="close" onclick="togglePopup()">×</div>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <p>Myle Community is a verified digital education initiative.</p>
     <p>Contact: <a href="mailto:support@mylecommunity.in">support@mylecommunity.in</a></p>
@@ -152,27 +137,58 @@
     <p><a href="https://mylecommunity.in/privacy" target="_blank">Privacy Policy</a></p>
   </footer>
 
-  <!-- Minimal JS: precise slider + popup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Myle Community?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Myle is a student-driven community helping young people explore online work opportunities using simple digital tools — guided by mentors who have walked the same path."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need prior experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Most students who start with Myle are complete beginners and learn step-by-step with support and guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How will I know if this is right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After filling the form, the team connects personally to explain details. You can decide freely if it fits your goals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What will happen after I fill the form?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The team contacts you via call or WhatsApp to share all steps and help you start easily from your phone or laptop."
+        }
+      }
+    ]
+  }
+  </script>
+
   <script>
-    // Slider control
     const track = document.getElementById('track');
     const dots = Array.from(document.getElementById('dots').children);
     const slides = document.querySelectorAll('.slide');
     let i = 0, N = slides.length;
-
-    function go(n){
-      i = (n + N) % N;
-      track.style.transform = `translateX(-${i*100}%)`;
-      dots.forEach((d,idx)=>d.classList.toggle('active', idx===i));
-    }
-    dots.forEach((d,idx)=>d.addEventListener('click', ()=>{go(idx); reset();}));
-
-    let t = setInterval(()=>go(i+1), 4000);
-    function reset(){ clearInterval(t); t = setInterval(()=>go(i+1), 4000); }
-
-    // Popup
-    function togglePopup(){ document.getElementById('popup').classList.toggle('active'); }
-    window.togglePopup = togglePopup;
+    function go(n){i=(n+N)%N;track.style.transform=`translateX(-${i*100}%)`;dots.forEach((d,idx)=>d.classList.toggle('active',idx===i));}
+    dots.forEach((d,idx)=>d.addEventListener('click',()=>{go(idx);reset();}));
+    let t=setInterval(()=>go(i+1),4000);
+    function reset(){clearInterval(t);t=setInterval(()=>go(i+1),4000);}
+    function togglePopup(){document.getElementById('popup').classList.toggle('active');}
+    window.togglePopup=togglePopup;
   </script>
 </body>
 </html>
