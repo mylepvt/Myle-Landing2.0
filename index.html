@@ -27,7 +27,7 @@
     .btn:hover{background:#FF897E;transform:translateY(-3px);}
     header::after{
       content:'';position:absolute;inset:0;z-index:0;
-      background:url('https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg') center/cover no-repeat;
+      background:url('https://raw.githubusercontent.com/mylepvt/Myle-Landing2.0/main/thar-karanveer.jpg') center/cover no-repeat;
       opacity:.15;mix-blend-mode:soft-light;
     }
 
@@ -43,7 +43,7 @@
     .carousel{position:relative;margin:3rem auto;width:min(1100px,92%);border-radius:18px;overflow:hidden;background:#fff;
       box-shadow:0 8px 28px rgba(0,0,0,.08);}
     .track{display:flex;transition:transform .7s ease-in-out;}
-    .slide{min-width:100%;height:440px;position:relative;}
+    .slide{min-width:100%;height:460px;position:relative;}
     .slide img{width:100%;height:100%;object-fit:cover;display:block;image-rendering:auto;}
     .cap{position:absolute;left:0;right:0;bottom:0;padding:.7rem 1rem;text-align:center;color:#fff;
       font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,.6);
@@ -58,7 +58,7 @@
     .metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.8rem;max-width:1000px;margin:0 auto;}
     .metric{background:#F9FBFD;border-radius:14px;padding:2rem;box-shadow:0 5px 15px rgba(0,0,0,0.08);transition:.3s;}
     .metric:hover{transform:translateY(-5px);}
-    .metric h3{font-size:2rem;color:#2C5282;margin-bottom:.6rem;}
+    .metric h3{font-size:2rem;color:#2C5282;margin-bottom:.6rem;transition:.5s;}
     .metric p{font-size:.98rem;color:#333;}
 
     /* FAQ */
@@ -108,20 +108,22 @@
 
   <section class="carousel">
     <div class="track" id="track">
-      <div class="slide"><img src="https://i.ibb.co/6cCZwqQ5/Thar-Founder.jpg?format=jpg&quality=100"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/DDmBJn5m/Community-Meeting.jpg?format=jpg&quality=100"><div class="cap">Students across India connecting and learning together.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/Zp6j2sMv/Award.jpg?format=jpg&quality=100"><div class="cap">Recognized for leadership and community excellence.</div></div>
-      <div class="slide"><img src="https://i.ibb.co/vxkRCVx2/Phuket.jpg?format=jpg&quality=100"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/mylepvt/Myle-Landing2.0/main/thar-karanveer.jpg"><div class="cap">Led by vision. Built with belief. Empowering thousands.</div></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/mylepvt/Myle-Landing2.0/main/meeting.jpg"><div class="cap">Students across India connecting and learning together.</div></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/mylepvt/Myle-Landing2.0/main/trophy.png"><div class="cap">Recognized for leadership and community excellence.</div></div>
+      <div class="slide"><img src="https://raw.githubusercontent.com/mylepvt/Myle-Landing2.0/main/suraj-phuket.jpg"><div class="cap">Exploring growth, mentorship, and rewards through teamwork.</div></div>
     </div>
-    <div class="dots" id="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="dots" id="dots">
+      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
   </section>
 
   <section class="metrics">
     <h2>Our Impact So Far 💼</h2>
     <div class="metrics-grid">
-      <div class="metric"><h3>10,000+</h3><p>Students achieved their first online income milestone through Myle.</p></div>
-      <div class="metric"><h3>19+</h3><p>States across India with active learners and growing communities.</p></div>
-      <div class="metric"><h3>1,000+</h3><p>New sign-ups every week exploring digital growth and opportunities.</p></div>
+      <div class="metric"><h3 class="counter" data-target="10000">0</h3><p>Students achieved their first online income milestone through Myle.</p></div>
+      <div class="metric"><h3 class="counter" data-target="19">0</h3><p>States across India with active learners and growing communities.</p></div>
+      <div class="metric"><h3 class="counter" data-target="1000">0</h3><p>New sign-ups every week exploring digital growth and opportunities.</p></div>
     </div>
   </section>
 
@@ -163,6 +165,7 @@
   </footer>
 
   <script>
+    // Carousel
     const track=document.getElementById('track');
     const dots=Array.from(document.getElementById('dots').children);
     const slides=document.querySelectorAll('.slide');
@@ -173,6 +176,27 @@
     function reset(){clearInterval(t);t=setInterval(()=>go(i+1),4000);}
     function togglePopup(){document.getElementById('popup').classList.toggle('active');}
     window.togglePopup=togglePopup;
+
+    // Metric Count Animation
+    const counters=document.querySelectorAll('.counter');
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const counter=entry.target;
+          const target=+counter.getAttribute('data-target');
+          let count=0;
+          const step=Math.ceil(target/100);
+          const update=()=>{
+            count+=step;
+            counter.textContent=(count>target?target:count).toLocaleString();
+            if(count<target) requestAnimationFrame(update);
+          };
+          update();
+          observer.unobserve(counter);
+        }
+      });
+    },{threshold:0.4});
+    counters.forEach(c=>observer.observe(c));
   </script>
 </body>
 </html>
